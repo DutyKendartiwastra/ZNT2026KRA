@@ -35,23 +35,25 @@ function initializeLayers(map) {
 
     // Zona Karanganyar 2024
     const Zona = new GeoJSONLayer({
-        url: "https://kmizofukvrgnmfbfgwsv.supabase.co/storage/v1/object/sign/ZNT2026/Zona20241.geojson?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZjFlMTc1Zi1iNzdhLTQ3YjEtOTRjYS03NzhiMmQyYTA4NWYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJaTlQyMDI2L1pvbmEyMDI0MS5nZW9qc29uIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MTk3NjIxOCwiZXhwIjoxNzgyMDYyNjE4fQ.CZYkVVnkxJy4ti5JWYgpVS2BEz8hPK9poh60AzwbVEo",
+        url: "https://kmizofukvrgnmfbfgwsv.supabase.co/storage/v1/object/sign/ZNT2026/Zona20241.geojson?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZjFlMTc1Zi1iNzdhLTQ3YjEtOTRjYS03NzhiMmQyYTA4NWYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJaTlQyMDI2L1pvbmEyMDI0MS5nZW9qc29uIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MTk4MDYwNCwiZXhwIjoxNzgzMTkwMjA0fQ.WHZOOHuNV1ZSIRRntt6ZJfS5P-wtLYn7teA4cvbMn8A",
         title: "Zona 2024",
         visible: true,
         renderer:window.ambilSimbolZona("simbol_Zona"),
         labelingInfo:window.ambilLabelZona("label_Zona"),
         //popupTemplate:window.ambilPopupZona("popup_Zona"),
     });
+
     // Sample 2023
-    const Sampel = new GeoJSONLayer({
-        url: "https://kmizofukvrgnmfbfgwsv.supabase.co/storage/v1/object/sign/ZNT2026/test_sampel.geojson?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZjFlMTc1Zi1iNzdhLTQ3YjEtOTRjYS03NzhiMmQyYTA4NWYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJaTlQyMDI2L3Rlc3Rfc2FtcGVsLmdlb2pzb24iLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzgxODkxMTIyLCJleHAiOjE3ODE5Nzc1MjJ9.9NAXc1vkQZ8Ua9O4ucDBEvdAlVV7as8p5HRE3EY5av8",
+    //const Sampel = new GeoJSONLayer({
+        //url: "https://kmizofukvrgnmfbfgwsv.supabase.co/storage/v1/object/sign/ZNT2026/test_sampel.geojson?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZjFlMTc1Zi1iNzdhLTQ3YjEtOTRjYS03NzhiMmQyYTA4NWYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJaTlQyMDI2L3Rlc3Rfc2FtcGVsLmdlb2pzb24iLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzgxODkxMTIyLCJleHAiOjE3ODE5Nzc1MjJ9.9NAXc1vkQZ8Ua9O4ucDBEvdAlVV7as8p5HRE3EY5av8",
         //title: "Sample 2023",
         //visible: true,
         //minScale: 10000,
         //maxScale: 1,
         //popupTemplate: window.ambilPopupSampel("popup_Sampel"),
         //renderer:window.ambilSimbolSampel("simbol_Sampel"),
-    });
+    //});
+
     // Persil Sebontang
     const Persil = new GeoJSONLayer({
         url: "https://raw.githubusercontent.com/DutyKendartiwastra/ZNT2023/main/Persil%20Sebontang%20Update.geojson",
@@ -60,12 +62,12 @@ function initializeLayers(map) {
         renderer:window.ambilSimbolPersil("simbol_Persil")
     });
 
-    map.addMany([Persil,Zona,Kelurahan,Kecamatan,Sampel]);
+    map.addMany([Persil,Zona,Kelurahan,Kecamatan]);
 
     //Ditarik ke window lagi
+    window.KelurahanLayer=Kelurahan;
     window.KecamatanLayer=Kecamatan;
     window.ZonaLayer = Zona;
-    window.SampelLayer = Sampel;
     window.PersilLayer = Persil;
 
     console.log("✅ Semua layer berhasil diinisialisasi");
