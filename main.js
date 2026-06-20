@@ -16,7 +16,7 @@ require([
     const view = new MapView({
         container: "MukaPeta",
         map: map,
-        zoom: 12,
+        zoom: 11,
         center: [110.948256, -7.594897]
     });
 

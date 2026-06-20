@@ -14,9 +14,25 @@ function initializeLayers(map) {
     console.log("✅ GeoJSONLayer ditemukan, mulai membuat layer...");
 
     //Batas Kecamatan
+    const Kecamatan=new GeoJSONLayer({
+        url:"https://raw.githubusercontent.com/DutyKendartiwastra/PTP-KRA/main/Batas_kecamatan.geojson",
+        title:"Batas Kecamatan",
+        renderer:window.ambilSimbolKecamatan("simbol_Kecamatan"),
+        labelingInfo:window.ambilLabelKecamatan("label_Kecamatan"),
+        visible:true,
+    });
 
     //Batas Kelurahan
-    
+    const Kelurahan= new GeoJSONLayer({
+        url:"https://raw.githubusercontent.com/DutyKendartiwastra/PTP-KRA/main/Batas_kelurahan.geojson",
+        title:"Batas Desa/Kelurahan",
+        renderer:window.ambilSimbolKelurahan("simbol_Kelurahan"),
+        labelingInfo:window.ambilLabelKelurahan("label_Kelurahan"),
+        visible:true,
+        minScale: 50000,
+        maxScale: 0
+    });
+
     // Zona Karanganyar 2024
     const Zona = new GeoJSONLayer({
         url: "https://kmizofukvrgnmfbfgwsv.supabase.co/storage/v1/object/sign/ZNT2026/Zona20241.geojson?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZjFlMTc1Zi1iNzdhLTQ3YjEtOTRjYS03NzhiMmQyYTA4NWYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJaTlQyMDI2L1pvbmEyMDI0MS5nZW9qc29uIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MTg5Mzk2OSwiZXhwIjoxNzgxOTgwMzY5fQ.-au5VTRE90slTTBVgsJJHXhrVxmIAChC-9wtgdslgpg",
@@ -44,10 +60,11 @@ function initializeLayers(map) {
         renderer:window.ambilSimbolPersil("simbol_Persil")
     });
 
-    map.addMany([Persil,Zona,Sampel]);
+    map.addMany([Persil,Zona,Kelurahan,Kecamatan,Sampel]);
 
     //Ditarik ke window lagi
-    window.ZonaLayer = Zona
+    window.KecamatanLayer=Kecamatan;
+    window.ZonaLayer = Zona;
     window.SampelLayer = Sampel;
     window.PersilLayer = Persil;
 
