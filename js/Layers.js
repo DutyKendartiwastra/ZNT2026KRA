@@ -35,7 +35,7 @@ function initializeLayers(map) {
 
     // Zona Karanganyar 2024
     const Zona = new GeoJSONLayer({
-        url: "https://kmizofukvrgnmfbfgwsv.supabase.co/storage/v1/object/sign/ZNT2026/Zona20241.geojson?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZjFlMTc1Zi1iNzdhLTQ3YjEtOTRjYS03NzhiMmQyYTA4NWYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJaTlQyMDI2L1pvbmEyMDI0MS5nZW9qc29uIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MTg5Mzk2OSwiZXhwIjoxNzgxOTgwMzY5fQ.-au5VTRE90slTTBVgsJJHXhrVxmIAChC-9wtgdslgpg",
+        url: "https://kmizofukvrgnmfbfgwsv.supabase.co/storage/v1/object/sign/ZNT2026/Zona20241.geojson?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZjFlMTc1Zi1iNzdhLTQ3YjEtOTRjYS03NzhiMmQyYTA4NWYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJaTlQyMDI2L1pvbmEyMDI0MS5nZW9qc29uIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MTk3NjIxOCwiZXhwIjoxNzgyMDYyNjE4fQ.CZYkVVnkxJy4ti5JWYgpVS2BEz8hPK9poh60AzwbVEo",
         title: "Zona 2024",
         visible: true,
         renderer:window.ambilSimbolZona("simbol_Zona"),
