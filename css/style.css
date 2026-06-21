@@ -1,0 +1,34 @@
+@import url('https://googleapis.com');
+
+* {
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family: "Poppins", sans-serif;
+}
+
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    background: #89D7B7;
+}
+.start{
+    display: flex;
+    padding: 5px;
+    gap: 10px;
+    justify-content: center;
+    align-items: center;
+    min-height:100vh;
+    background: #46a980;
+}
+.cover{
+    display: flex;
+    width:600px;
+    height:100%;
+    background: #f0f0f0;
+    gap: 20px;
+    align-items: center;        /* tengah vertikal */
+    justify-content: center; 
+}
