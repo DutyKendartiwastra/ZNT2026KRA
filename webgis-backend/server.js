@@ -7,7 +7,7 @@ import bcrypt from 'bcryptjs';
 dotenv.config();
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 8080;
 const JWT_SECRET = process.env.JWT_SECRET || 'znt-karanganyar-super-secret-2026';
 
 app.use(cors());
