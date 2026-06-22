@@ -8,7 +8,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
     errorMsg.style.display = "none";
 
     try {
-        const response = await fetch('https://backendwebgis-production.up.railway.app/', {
+        const response = await fetch('https://backendwebgis-production.up.railway.app/api/login', {
             method: 'POST',
             headers: {
                 'Content-Type': 'application/json'
@@ -23,7 +23,7 @@ document.getElementById('loginForm').addEventListener('submit', async function(e
             localStorage.setItem('user', JSON.stringify(data.user));
             
             alert('Login berhasil! Redirect ke WebGIS...');
-            window.location.href = "index.html";   // Ganti dengan nama file WebGIS kamu
+            window.location.href = "index.html";   
         } else {
             errorMsg.textContent = data.message || "Username atau password salah";
             errorMsg.style.display = "block";
