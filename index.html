@@ -33,11 +33,6 @@
         }
         </script>
         
-        <button onclick="logout()" style="position: absolute; top: 20px; right: 20px;">
-            Logout
-        </button>
-
-
         <!-- JUDUL -->
         <div class="judul fixed top-4 left-16 bg-white/90 backdrop-blur-md shadow-xl rounded-2xl p-4 flex items-center gap-3 border border-gray-200 z-[999] max-w-[225px]">
             <!-- Logo -->
@@ -78,7 +73,11 @@
         <!--input layer-->
         <script src="js/Layers.js"></script>
         <script src="main.js"></script>
-        <div id="MukaPeta" class="h-screen w-screen"></div>
+        <div id="MukaPeta" class="h-screen w-screen">
+            <button onclick="logout()" style="position: fixed; top: 150px; right: 100px; z-index: 999;">
+            Logout
+            </button>
+        </div>
         
     </body>
 </html>
