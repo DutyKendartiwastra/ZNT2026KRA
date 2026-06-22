@@ -1,0 +1,9 @@
+# Izinkan akses ke backend Railway
+/*
+  Access-Control-Allow-Origin: *
+  Access-Control-Allow-Methods: GET, POST, OPTIONS
+  Access-Control-Allow-Headers: Content-Type, Authorization
+
+# CSP
+/*
+  Content-Security-Policy: default-src 'self'; connect-src 'self' https://backendwebgis-production.up.railway.app https://*.railway.app;
