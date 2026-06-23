@@ -1,7 +1,7 @@
 //Simbologi 8 Kelas
 const Kelas1={
         type: "simple-fill",
-          color: [56, 168, 80, 0.8],
+          color: [56, 168, 80, 0.5],
           style: "solid",
           outline: {
             width: 0.2,
@@ -10,7 +10,7 @@ const Kelas1={
       };
 const Kelas2={
         type: "simple-fill",
-          color: [102, 191, 80, 0.8],
+          color: [102, 191, 80, 0.5],
           style: "solid",
           outline: {
             width: 0.2,
@@ -19,7 +19,7 @@ const Kelas2={
       };      
 const Kelas3={
         type: "simple-fill",
-          color: [155, 217, 80, 0.8],
+          color: [155, 217, 80, 0.5],
           style: "solid",
           outline: {
             width: 0.2,
@@ -28,7 +28,7 @@ const Kelas3={
       };      
 const Kelas4={
         type: "simple-fill",
-          color: [222, 242, 80, 0.8],
+          color: [222, 242, 80, 0.5],
           style: "solid",
           outline: {
             width: 0.2,
@@ -37,7 +37,7 @@ const Kelas4={
       };      
 const Kelas5={
         type: "simple-fill",
-          color: [255, 221, 80, 0.8],
+          color: [255, 221, 80, 0.5],
           style: "solid",
           outline: {
             width: 0.2,
@@ -46,7 +46,7 @@ const Kelas5={
       };      
 const Kelas6={
         type: "simple-fill",
-          color: [255, 145, 80, 0.8],
+          color: [255, 145, 80, 0.5],
           style: "solid",
           outline: {
             width: 0.2,
@@ -55,7 +55,7 @@ const Kelas6={
       };
 const Kelas7={
         type: "simple-fill",
-          color: [255, 72, 80, 0.8],
+          color: [255, 72, 80, 0.5],
           style: "solid",
           outline: {
             width: 0.2,
@@ -64,7 +64,7 @@ const Kelas7={
       };
 const Kelas8={
         type: "simple-fill",
-          color: [255, 0, 80, 0.8],
+          color: [255, 0, 80, 0.5],
           style: "solid",
           outline: {
             width: 0.2,
@@ -123,9 +123,9 @@ const simbolZona={simbol_Zona:{
             },
             {
               minValue: 2087101,
-              maxValue: 13721078,
+              maxValue: 14171000,
               symbol: Kelas8,
-              label: "Rp.2.087.000 - Rp.13.721.000"
+              label: "Rp.2.087.000 - Rp.14.171.000"
             },
           ]
 }};

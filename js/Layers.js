@@ -46,11 +46,22 @@ function initializeLayers(map) {
     const Zona = new GeoJSONLayer({
         url: "https://kmizofukvrgnmfbfgwsv.supabase.co/storage/v1/object/sign/ZNT2026/Zona20241.geojson?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZjFlMTc1Zi1iNzdhLTQ3YjEtOTRjYS03NzhiMmQyYTA4NWYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJaTlQyMDI2L1pvbmEyMDI0MS5nZW9qc29uIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MTk4MDYwNCwiZXhwIjoxNzgzMTkwMjA0fQ.WHZOOHuNV1ZSIRRntt6ZJfS5P-wtLYn7teA4cvbMn8A",
         title: "Zona 2024",
+        visible: false,
+        renderer:window.ambilSimbolZona("simbol_Zona"),
+        labelingInfo:window.ambilLabelZona("label_Zona"),
+        //popupTemplate:window.ambilPopupZona("popup_Zona"),
+    });
+
+    // Zona Karanganyar 2026
+    const Zona2026 = new GeoJSONLayer({
+        url: "https://kmizofukvrgnmfbfgwsv.supabase.co/storage/v1/object/sign/ZNT2026/Zona2026.geojson?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZjFlMTc1Zi1iNzdhLTQ3YjEtOTRjYS03NzhiMmQyYTA4NWYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJaTlQyMDI2L1pvbmEyMDI2Lmdlb2pzb24iLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzgyMjAwOTA0LCJleHAiOjE3ODI4MDU3MDR9.Cwj1WzKdoneVVQJzvB3Xi9IUQWDXoA4EPaqyYkOBJOY",
+        title: "Zona 2026",
         visible: true,
         renderer:window.ambilSimbolZona("simbol_Zona"),
         labelingInfo:window.ambilLabelZona("label_Zona"),
         //popupTemplate:window.ambilPopupZona("popup_Zona"),
     });
+
 
     // Sample 2023
     //const Sampel = new GeoJSONLayer({
@@ -73,13 +84,14 @@ function initializeLayers(map) {
         maxScale: 0
     });
 
-    map.addMany([Zona,Kelurahan,Kecamatan,Kabupaten,Persil]);
+    map.addMany([Zona,Zona2026,Kelurahan,Kecamatan,Kabupaten,Persil]);
 
     //Ditarik ke window lagi
     window.KelurahanLayer=Kelurahan;
     window.KecamatanLayer=Kecamatan;
     window.KecamatanLayer=Kabupaten;
     window.ZonaLayer = Zona;
+    window.Zona2026Layer = Zona2026;
     window.PersilLayer = Persil;
 
     console.log("✅ Semua layer berhasil diinisialisasi");

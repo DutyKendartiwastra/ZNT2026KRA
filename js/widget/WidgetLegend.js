@@ -10,7 +10,7 @@ function initializeLegend(view) {
     try {
         const Legend = window.createLegend;
         const Expand= window.createExpand;
-        const Zona=window.ZonaLayer;
+        const Zona2026=window.Zona2026Layer;
 
         //FX UTAMA
         const legendWidget = new Expand({
@@ -19,7 +19,7 @@ function initializeLegend(view) {
             style: "classic", // other styles include 'classic/classic'
             layerInfos: [
               {
-                layer: Zona,
+                layer: Zona2026,
                 title: "Zona Nilai Tanah"
               },
             ],
