@@ -24,15 +24,17 @@ body {
     flex-direction: column;
     justify-content: center;
     padding: 3rem 2.8rem;
-    background: linear-gradient(135deg, #f8fafc 0%, #f0f7ff 100%);
-    gap: 1.8rem;
-    overflow-y: auto;
+    gap: 2rem;
     min-height: 100vh;
+    overflow-y: auto;
     
-    /* Efek Shadow yang Elegan */
-    box-shadow: 10px 0 30px -10px rgba(0, 0, 0, 0.15);
+    /* Background Gambar Baru */
+    background-image: url('https://raw.githubusercontent.com/DutyKendartiwastra/ZNT2026KRA/refs/heads/main/data/bagus.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    
     position: relative;
-    z-index: 2;
 }
 
 /* Kanan - Gambar */
@@ -58,7 +60,9 @@ body {
 .branding {
     display: flex;
     flex-direction: column;
-    gap: 8px;
+    gap: 0px;
+    justify-content: left;
+    max-width: 300px;        /* Batasi lebar form */
 }
 
 .branding img.logo {
