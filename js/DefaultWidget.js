@@ -24,6 +24,11 @@ function initializeDefaultWidgets(view) {
             name: "Basemap", 
             init: window.initializeBasemap
         },
+        {
+            name: "Kompas", 
+            init: window.initializeCompass
+        },
+        
         // Tambah widget baru di sini nanti
     ];
 
