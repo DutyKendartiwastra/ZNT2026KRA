@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="id">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="https://js.arcgis.com/4.24/esri/themes/light/main.css"/>
+        <link rel="stylesheet" href="style.css">
+        <script src="https://js.arcgis.com/4.24/"></script>
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2/dist/umd/supabase.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2"></script>
+        <title>ZNT Kab.Karanganyar</title>
+    </head>
+    
+    <body>
+        <!-- === PROTEKSI LOGIN (Paling Atas) === -->
+
+        <script>
+            // Cek apakah sudah login
+        //    if (!localStorage.getItem('token')) {
+        //        alert("Anda belum login. Silakan login terlebih dahulu.");
+        //        window.location.href = "login page.html";  // Ganti dengan nama file login kamu
+        //   }
+        </script>
+
+        <script>
+        //    function logout() {
+        //    if (confirm('Yakin ingin logout?')) {
+        //       localStorage.removeItem('token');
+        //       localStorage.removeItem('user');
+        //       alert('Anda telah logout.');
+        //       window.location.href = "login page.html";  // atau halaman login kamu
+        //    }
+        //}
+        </script>
+        
+        <!-- JUDUL -->
+        <div class="judul fixed top-4 left-16 bg-white/90 backdrop-blur-md shadow-xl rounded-2xl p-4 flex items-center gap-3 border border-gray-200 z-[999] max-w-[225px]">
+            <!-- Logo -->
+            <img src="https://raw.githubusercontent.com/DutyKendartiwastra/Belajar1/main/Foto/LogoBPN.png" 
+                alt="logo" 
+                class="w-9 h-9 flex-shrink-0">
+            <!-- Teks -->
+            <div>
+                <h1 class="text-base font-bold text-gray-800 leading-tight">
+                    Pembaruan ZNT
+                </h1>
+                <p class="text-xs text-gray-600 font-medium">
+                    Kab. Karanganyar
+                </p>
+            </div>
+        </div>
+        <!-- LOAD FILE JAVA .JS-->
+
+        <!--widget-->
+        <script src="./js/DefaultWidget.js"></script>
+        <script src="./js/widget/WidgetLegend.js"></script>
+        <script src="./js/widget/WidgetCompass.js"></script>
+        <script src="./js/widget/WidgetBasemap.js"></script>
+        <script src="./js/widget/WidgetSearch.js"></script>
+        <script src="./js/widget/WidgetLayerList.js"></script>
+        <script src="./js/widget/WidgetLocate.js"></script>
+        <script src="./js/widget/WidgetScaleBar.js"></script>
+
+        <!--simbol, popup dan label-->
+        <script src="./js/renderers/Kecamatan/KecamatanLabel.js"></script>
+        <script src="./js/renderers/Kecamatan/KecamatanSimbol.js"></script>
+        <script src="./js/renderers/Kelurahan/KelurahanLabel.js"></script>
+        <script src="./js/renderers/Kelurahan/KelurahanSimbol.js"></script>
+        <script src="./js/renderers/Zona/ZonaPopup.js"></script>
+        <script src="./js/renderers/Zona/ZonaLabel.js"></script>
+        <script src="./js/renderers/Zona/ZonaSimbol.js"></script>
+        <script src="./js/renderers/Persil/PersilSimbol.js"></script>
+        <script src="./js/renderers/Sampel/SampelSimbol.js"></script>
+        <script src="./js/renderers/Sampel/SampelPopup.js"></script>
+
+        <!--input layer-->
+        <script src="js/Layers.js"></script>
+        <script src="main.js"></script>
+        <div id="MukaPeta" class="h-screen w-screen">
+            <button onclick="logout()" style="position: fixed; top: 20px; right: 280px; z-index: 999;">
+            Logout
+            </button>
+        </div>
+        
+    </body>
+</html>

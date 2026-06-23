@@ -28,6 +28,10 @@ function initializeDefaultWidgets(view) {
             name: "Kompas", 
             init: window.initializeCompass
         },
+        {
+            name: "Legend", 
+            init: window.initializeLegend
+        }
         
         // Tambah widget baru di sini nanti
     ];

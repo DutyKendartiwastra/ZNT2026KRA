@@ -8,7 +8,8 @@ require([
     "esri/widgets/Expand",
     "esri/widgets/Search",
     "esri/widgets/BasemapToggle",
-    "esri/widgets/Compass"
+    "esri/widgets/Compass",
+    "esri/widgets/Legend"
 ], function(
     Map,
     MapView,
@@ -19,7 +20,8 @@ require([
     Expand,
     Search,
     BasemapToggle,
-    Compass
+    Compass,
+    Legend
 ) {
     //push fx ke window
     window.createSearch=Search;
@@ -30,6 +32,7 @@ require([
     window.createGeoJSONLayer = GeoJSONLayer;
     window.createBasemapToggle=BasemapToggle;
     window.createCompass=Compass;
+    window.createLegend=Legend;
 
     // ==================== MAP SETUP ====================
     const map = new Map({
