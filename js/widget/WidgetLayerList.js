@@ -23,7 +23,7 @@ function initializeLayerList(view) {
               group: "top-left"})
         
         view.ui.add(daftar_layer, {
-            position: "bottom-left",
+            position: "top-left",
             index: 1   // tambahkan index agar tidak tertutup
         })
         //---------------------------

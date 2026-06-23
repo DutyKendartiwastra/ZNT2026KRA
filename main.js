@@ -7,6 +7,7 @@ require([
     "esri/widgets/LayerList",
     "esri/widgets/Expand",
     "esri/widgets/Search",
+    "esri/widgets/BasemapToggle"
 ], function(
     Map,
     MapView,
@@ -16,6 +17,7 @@ require([
     LayerList,
     Expand,
     Search,
+    BasemapToggle,
 ) {
     //push fx ke window
     window.createSearch=Search;
@@ -24,7 +26,7 @@ require([
     window.createLocate=Locate;
     window.createScaleBar=ScaleBar;
     window.createGeoJSONLayer = GeoJSONLayer;
-    
+    window.createBasemapToggle=BasemapToggle;
 
     // ==================== MAP SETUP ====================
     const map = new Map({

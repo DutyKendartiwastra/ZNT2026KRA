@@ -19,7 +19,11 @@ function initializeDefaultWidgets(view) {
         {
             name: "Search", 
             init: window.initializeSearch
-        }
+        },
+        {
+            name: "Basemap", 
+            init: window.initializeBasemap
+        },
         // Tambah widget baru di sini nanti
     ];
 
