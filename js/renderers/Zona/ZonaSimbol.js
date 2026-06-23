@@ -83,49 +83,49 @@ const simbolZona={simbol_Zona:{
               minValue: 0,
               maxValue: 153189,
               symbol: Kelas1,
-              label: "Rp.535.800 - dst."
+              label: "Rp.0 - Rp.153.000"
             },
             {
-              minValue: 0,
+              minValue: 153189,
               maxValue: 227569,
               symbol: Kelas2,
-              label: "Rp.689.900 - 802.400"
+              label: "Rp.153.000 - Rp.227.000"
             },
             {
               minValue: 227569,
               maxValue: 302068,
               symbol: Kelas3,
-              label: "Rp.802.500 - 888.600"
+              label: "Rp.227.000 - Rp.302.000"
             },
             {
               minValue: 302068,
               maxValue: 407925,
               symbol: Kelas4,
-              label: "Rp.888.600 - dst"
+              label: "Rp.302.000 - Rp.407.000"
             },
             {
               minValue: 407925,
               maxValue: 589734,
               symbol: Kelas5,
-              label: "Kelas5"
+              label: "Rp.407.000 - Rp.589.000"
             },
             {
               minValue: 589734,
               maxValue: 1085913,
               symbol: Kelas6,
-              label: "Kelas6"
+              label: "Rp.589.000 - Rp.1.085.000"
             },
             {
               minValue: 1085913,
               maxValue: 2087101,
               symbol: Kelas7,
-              label: "Kelas7"
+              label: "Rp.1.085.000 - Rp.2.087.000"
             },
             {
               minValue: 2087101,
               maxValue: 13721078,
               symbol: Kelas8,
-              label: "Kelas8"
+              label: "Rp.2.087.000 - Rp.13.721.000"
             },
           ]
 }};
