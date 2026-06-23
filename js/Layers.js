@@ -13,6 +13,15 @@ function initializeLayers(map) {
     const GeoJSONLayer = window.createGeoJSONLayer;
     console.log("✅ GeoJSONLayer ditemukan, mulai membuat layer...");
 
+    //Batas Kabupaten
+    const Kabupaten=new GeoJSONLayer({
+        url:"https://kmizofukvrgnmfbfgwsv.supabase.co/storage/v1/object/sign/ZNT2026/BatasKabupaten.geojson?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZjFlMTc1Zi1iNzdhLTQ3YjEtOTRjYS03NzhiMmQyYTA4NWYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJaTlQyMDI2L0JhdGFzS2FidXBhdGVuLmdlb2pzb24iLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzgyMTk5OTI5LCJleHAiOjE4MTM3MzU5Mjl9.gNa44oJ5BNXDVYdvKXRKo77LydNwEVyODlNogzu_RNM",
+        title:"Batas Kabupaten",
+        renderer:window.ambilSimbolKabupaten("simbol_Kabupaten"),
+        //labelingInfo:window.ambilLabelKecamatan("label_Kecamatan"),
+        //visible:true,
+    });
+
     //Batas Kecamatan
     const Kecamatan=new GeoJSONLayer({
         url:"https://raw.githubusercontent.com/DutyKendartiwastra/PTP-KRA/main/Batas_kecamatan.geojson",
@@ -54,19 +63,22 @@ function initializeLayers(map) {
         //renderer:window.ambilSimbolSampel("simbol_Sampel"),
     //});
 
-    // Persil Sebontang
+    // Persil Lokasi Pembaruan
     const Persil = new GeoJSONLayer({
-        url: "https://raw.githubusercontent.com/DutyKendartiwastra/ZNT2023/main/Persil%20Sebontang%20Update.geojson",
-        title: "Persil Sebontang",
+        url: "https://kmizofukvrgnmfbfgwsv.supabase.co/storage/v1/object/sign/ZNT2026/BatasBidang.geojson?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZjFlMTc1Zi1iNzdhLTQ3YjEtOTRjYS03NzhiMmQyYTA4NWYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJaTlQyMDI2L0JhdGFzQmlkYW5nLmdlb2pzb24iLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzgyMTk4OTgxLCJleHAiOjE4MTM3MzQ5ODF9.eylUPOdz2Zx1Cj936yK6x2nQFW63ANqNwic16kMylDU",
+        title: "Batas Bidang Tanah",
         visible: false,
-        renderer:window.ambilSimbolPersil("simbol_Persil")
+        renderer:window.ambilSimbolPersil("simbol_Persil"),
+        minScale: 50000,
+        maxScale: 0
     });
 
-    map.addMany([Persil,Zona,Kelurahan,Kecamatan]);
+    map.addMany([Zona,Kelurahan,Kecamatan,Kabupaten,Persil]);
 
     //Ditarik ke window lagi
     window.KelurahanLayer=Kelurahan;
     window.KecamatanLayer=Kecamatan;
+    window.KecamatanLayer=Kabupaten;
     window.ZonaLayer = Zona;
     window.PersilLayer = Persil;
 
