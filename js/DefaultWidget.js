@@ -31,8 +31,7 @@ function initializeDefaultWidgets(view) {
         {
             name: "Legend", 
             init: window.initializeLegend
-        }
-        
+        },
         // Tambah widget baru di sini nanti
     ];
 

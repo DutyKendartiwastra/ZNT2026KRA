@@ -15,20 +15,22 @@
     
     <body>
         <!-- === PROTEKSI LOGIN (Paling Atas) === -->
+
         <script>
             // Cek apakah sudah login
             if (!localStorage.getItem('token')) {
                 alert("Anda belum login. Silakan login terlebih dahulu.");
                 window.location.href = "login page.html";  // Ganti dengan nama file login kamu
-            }
+           }
         </script>
+
         <script>
             function logout() {
             if (confirm('Yakin ingin logout?')) {
-                localStorage.removeItem('token');
-                localStorage.removeItem('user');
-                alert('Anda telah logout.');
-                window.location.href = "login page.html";  // atau halaman login kamu
+               localStorage.removeItem('token');
+               localStorage.removeItem('user');
+               alert('Anda telah logout.');
+               window.location.href = "login page.html";  // atau halaman login kamu
             }
         }
         </script>
