@@ -7,48 +7,58 @@
 body {
     font-family: 'Poppins', system-ui, -apple-system, sans-serif;
     line-height: 1.6;
+    background: #f8fafc;
 }
 
 /* Container Utama */
 .login-container {
     display: flex;
-    min-height: 100vh;           /* Full height */
+    min-height: 100vh;
     width: 100%;
 }
 
-/* Kiri - Form (30%) */
+/* ================= PANEL KIRI ================= */
 .login-left {
-    flex: 0 0 30%;              /* Proporsi 30% */
+    flex: 0 0 30%;
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 2.5rem 2.5rem;
-    background: linear-gradient(135deg, #f8fafc 0%, #e0f2fe 100%);
-    gap: 1.5rem;
+    padding: 3rem 2.8rem;
+    background: linear-gradient(135deg, #f8fafc 0%, #f0f7ff 100%);
+    gap: 1.8rem;
     overflow-y: auto;
     min-height: 100vh;
+    
+    /* Efek Shadow yang Elegan */
+    box-shadow: 10px 0 30px -10px rgba(0, 0, 0, 0.15);
+    position: relative;
+    z-index: 2;
 }
 
-/* Kanan - Gambar (70%) */
+/* Kanan - Gambar */
 .login-right {
-    flex: 0 0 70%;              /* Proporsi 70% */
+    flex: 0 0 70%;
     position: relative;
     overflow: hidden;
     min-height: 100vh;
 }
 
 .bg-image {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     object-fit: cover;
+    object-position: center;
     opacity: 0.95;
 }
 
-/* Styling Lainnya (disesuaikan) */
+/* ================= FORM STYLING ================= */
 .branding {
     display: flex;
     flex-direction: column;
-    gap: 0px;
+    gap: 8px;
 }
 
 .branding img.logo {
@@ -57,20 +67,21 @@ body {
 }
 
 .login-form h1 {
-    font-size: 2.1rem;
+    font-size: 2.2rem;
     font-weight: 700;
     color: #1e3a8a;
     line-height: 1.2;
+    margin-bottom: 0.5rem;
 }
 
 .subtitle {
-    font-size: 1.15rem;
+    font-size: 1.2rem;
     color: #3b82f6;
     font-weight: 500;
 }
 
 .input-group {
-    margin-bottom: 1rem;
+    margin-bottom: 1.2rem;
 }
 
 .input-group label {
@@ -86,6 +97,13 @@ body {
     border: 2px solid #e2e8f0;
     border-radius: 12px;
     font-size: 1.05rem;
+    transition: all 0.3s;
+}
+
+.input-group input:focus {
+    border-color: #3b82f6;
+    outline: none;
+    box-shadow: 0 0 0 3px rgba(59, 130, 246, 0.15);
 }
 
 .btn-login {
@@ -98,39 +116,40 @@ body {
     font-size: 1.15rem;
     font-weight: 600;
     cursor: pointer;
-    margin-top: 1rem;
-    transition: 0.3s;
+    margin-top: 0.5rem;
+    transition: all 0.3s;
 }
 
 .btn-login:hover {
     background: #facc15;
-    transform: translateY(-2px);
+    transform: translateY(-3px);
+    box-shadow: 0 10px 20px rgba(234, 179, 8, 0.3);
 }
 
 /* ================= RESPONSIVE ================= */
 @media (max-width: 1024px) {
     .login-left {
-        padding: 2rem 2rem;
+        padding: 2.5rem 2rem;
     }
 }
 
 @media (max-width: 768px) {
     .login-container {
-        flex-direction: column;     /* Stack vertikal di HP */
+        flex-direction: column;
     }
     
     .login-left {
         flex: none;
         min-height: auto;
-        padding: 2rem 1.5rem;
+        padding: 2.5rem 1.8rem;
+        box-shadow: none;           /* Hilangkan shadow di mobile */
     }
     
     .login-right {
-        display: none;              /* Sembunyikan gambar di HP */
-        height: 300px;              /* Bisa diubah jadi tampil kecil */
+        display: none;
     }
     
     .login-form h1 {
-        font-size: 1.8rem;
+        font-size: 1.85rem;
     }
 }
