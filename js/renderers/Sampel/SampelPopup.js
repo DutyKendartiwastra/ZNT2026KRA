@@ -1,6 +1,6 @@
 //Pop Up Titik Sampel
       const popupSampel ={popup_Sampel:{
-        title :"Nomor Entri {Nomor Entry}",
+        title :"Nomor Entri {No Marking GPS}",
         content:
               [{
                 type: "fields",
@@ -10,10 +10,6 @@
                   //  label: "Foto",
                   //  format:"<img src='{Foto}'>",
                   //},
-                  {
-                    fieldName: "No Marking GPS",
-                    label: "Nomor Entri",
-                  },
                   {
                     fieldName: "Nama Surveyor",
                     label: "Nama Surveyor"
@@ -68,7 +64,11 @@
                   },
                   {
                     fieldName: "Luas tanah (m2)",
-                    label: "Luas tanah (m2)"
+                    label: "Luas tanah (m2)",
+                    format:{
+                      digitSeparator:true,
+                      places:0
+                    }
                   },
                   {
                     fieldName: "Lebar Depan (m)",

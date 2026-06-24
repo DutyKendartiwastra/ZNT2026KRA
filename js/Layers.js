@@ -59,7 +59,7 @@ function initializeLayers(map) {
         visible: true,
         renderer:window.ambilSimbolZona("simbol_Zona"),
         labelingInfo:window.ambilLabelZona("label_Zona"),
-        //popupTemplate:window.ambilPopupZona("popup_Zona"),
+        popupTemplate:window.ambilPopupZona("popup_Zona"),
     });
 
 

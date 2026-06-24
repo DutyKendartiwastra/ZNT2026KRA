@@ -1,6 +1,17 @@
 //Label Zona
 const popupZona = {popup_Zona:{
     title :"Nilai {RPBULAT}",
+    content:[{
+        type:"fields",
+        fieldInfos:[
+            {
+              fieldName: "NOZONE",
+              label: "Nomor Zona"
+            },       
+        ]
+    }
+        
+    ]
 }};
 
 function ambilPopupZona(name) {
