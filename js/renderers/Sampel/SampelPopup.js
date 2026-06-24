@@ -5,11 +5,11 @@
               [{
                 type: "fields",
                 fieldInfos: [
-                  //{
-                  //  fieldName: "Foto",
-                  //  label: "Foto",
-                  //  format:"<img src='{Foto}'>",
-                  //},
+                  {
+                    fieldName: "Foto",
+                    label: "Foto",
+                    format:"<img src='{LinkA}'>",
+                  },
                   {
                     fieldName: "Nama Surveyor",
                     label: "Nama Surveyor"
@@ -294,7 +294,7 @@
                   title:"Foto Lokasi",
                   type: "image",
                   value:{
-                    sourceURL:"{Link A}"
+                    sourceURL:"{LinkA}"
                   }
                 }]
               },
