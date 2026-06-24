@@ -54,7 +54,7 @@ function initializeLayers(map) {
 
     // Zona Karanganyar 2026
     const Zona2026 = new GeoJSONLayer({
-        url: "https://kmizofukvrgnmfbfgwsv.supabase.co/storage/v1/object/sign/ZNT2026/TS2026JoinGetoagOK.geojson?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZjFlMTc1Zi1iNzdhLTQ3YjEtOTRjYS03NzhiMmQyYTA4NWYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJaTlQyMDI2L1RTMjAyNkpvaW5HZXRvYWdPSy5nZW9qc29uIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MjM0MzIzMCwiZXhwIjoxNzg0OTM1MjMwfQ.4QsUcYFB6qmwZynj3Pe8oZ_nFo1zN8UbERYfK9-AYKY",
+        url: "https://kmizofukvrgnmfbfgwsv.supabase.co/storage/v1/object/sign/ZNT2026/Zona2026.geojson?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZjFlMTc1Zi1iNzdhLTQ3YjEtOTRjYS03NzhiMmQyYTA4NWYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJaTlQyMDI2L1pvbmEyMDI2Lmdlb2pzb24iLCJzY29wZSI6ImRvd25sb2FkIiwiaWF0IjoxNzgyMjAwOTA0LCJleHAiOjE3ODI4MDU3MDR9.Cwj1WzKdoneVVQJzvB3Xi9IUQWDXoA4EPaqyYkOBJOY",
         title: "Zona 2026",
         visible: true,
         renderer:window.ambilSimbolZona("simbol_Zona"),
@@ -66,7 +66,7 @@ function initializeLayers(map) {
     // Sample 2026
     const simbolWrapper = window.ambilSimbolSampel("simbol_Sampel");
     const Sampel2026 = new GeoJSONLayer({
-        url: "https://kmizofukvrgnmfbfgwsv.supabase.co/storage/v1/object/sign/ZNT2026/TS2026Join.geojson?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZjFlMTc1Zi1iNzdhLTQ3YjEtOTRjYS03NzhiMmQyYTA4NWYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJaTlQyMDI2L1RTMjAyNkpvaW4uZ2VvanNvbiIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODIzMzI1NzgsImV4cCI6MTgxMzg2ODU3OH0.HLCQdRJ-UggQaJhoOtGOc4MAWT9sftIXXKeYPj3v968",
+        url: "https://kmizofukvrgnmfbfgwsv.supabase.co/storage/v1/object/sign/ZNT2026/TS2026JoinGetoagOK.geojson?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZjFlMTc1Zi1iNzdhLTQ3YjEtOTRjYS03NzhiMmQyYTA4NWYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJaTlQyMDI2L1RTMjAyNkpvaW5HZXRvYWdPSy5nZW9qc29uIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MjM0MzIzMCwiZXhwIjoxNzg0OTM1MjMwfQ.4QsUcYFB6qmwZynj3Pe8oZ_nFo1zN8UbERYfK9-AYKY",
         title: "Sample 2026",
         visible: true,
         minScale: 20000,
