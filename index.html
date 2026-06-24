@@ -16,13 +16,46 @@
     <body>
         <!-- === PROTEKSI LOGIN (Paling Atas) === -->
 
-        <script>
-            // Cek apakah sudah login
-            if (!localStorage.getItem('token')) {
-                alert("Anda belum login. Silakan login terlebih dahulu.");
-                window.location.href = "login page.html";  // Ganti dengan nama file login kamu
-           }
-        </script>
+        <!-- === PROTEKSI LOGIN (Paling Atas) === -->
+<script>
+    async function checkAuth() {
+        const token = localStorage.getItem('token');
+        
+        if (!token) {
+            alert("Anda belum login. Silakan login terlebih dahulu.");
+            window.location.href = "login page.html";
+            return;
+        }
+
+        try {
+            const response = await fetch('https://backend-kamu.up.railway.app/api/check-login', {
+                method: 'GET',
+                headers: {
+                    'Authorization': `Bearer ${token}`,
+                    'Content-Type': 'application/json'
+                }
+            });
+
+            const data = await response.json();
+
+            if (!data.loggedIn) {
+                localStorage.removeItem('token');
+                localStorage.removeItem('user');
+                alert("Sesi login Anda telah berakhir. Silakan login kembali.");
+                window.location.href = "login page.html";
+            }
+        } catch (error) {
+            console.error("Error cek login:", error);
+            localStorage.removeItem('token');
+            localStorage.removeItem('user');
+            alert("Sesi login tidak valid. Silakan login kembali.");
+            window.location.href = "login page.html";
+        }
+    }
+
+    // Jalankan pengecekan saat halaman dimuat
+    window.onload = checkAuth;
+</script>
 
         <script>
             function logout() {
