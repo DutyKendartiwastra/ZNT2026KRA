@@ -5,22 +5,14 @@
               [{
                 type: "fields",
                 fieldInfos: [
+                  //{
+                  //  fieldName: "Foto",
+                  //  label: "Foto",
+                  //  format:"<img src='{Foto}'>",
+                  //},
                   {
-                    fieldName: "Foto",
-                    label: "Foto",
-                    format:"<img src='{Foto}'>",
-                  },
-                  {
-                    fieldName: "Sumber Informasi",
-                    label: "Sumber Informasi",
-                  },
-                  {
-                    fieldName: "Nomor HP",
-                    label: "Nomor HP"
-                  },
-                  {
-                    fieldName: "Nomor Identifikasi",
-                    label: "Nomor Identifikasi"
+                    fieldName: "No Marking GPS",
+                    label: "Nomor Entri",
                   },
                   {
                     fieldName: "Nama Surveyor",
@@ -39,20 +31,20 @@
                     label: "Alamat"
                   },
                   {
-                    fieldName: "Kelurahan",
-                    label: "Kelurahan"
+                    fieldName: "Kelurahan / Desa",
+                    label: "Kelurahan / Desa"
                   },
                   {
-                    fieldName: "Kencamatan",
+                    fieldName: "Kecamatan",
                     label: "Kecamatan"
                   },
                   {
-                    fieldName: "X",
-                    label: "Koordinat X"
+                    fieldName: "Koordinat X (TM3)",
+                    label: "Koordinat X (TM3)"
                   },
                   {
-                    fieldName: "Y",
-                    label: "Koordinat Y"
+                    fieldName: "Koordinat Y (TM3)",
+                    label: "Koordinat Y (TM3)"
                   },
                   {
                     fieldName: "Status Kepemilikan",
@@ -67,8 +59,12 @@
                     label: "Tanggal Penawaran/ Transaksi"
                   },
                   {
-                    fieldName: "Harga Penawaran/ Transaksi (Rp.)",
-                    label: "Harga Penawaran/ Transaksi (Rp.)"
+                    fieldName: "Harga Penawaran/ Transaksi (Rp.)           ",
+                    label: "Harga Penawaran/ Transaksi (Rp.)           ",
+                    format:{
+                      digitSeparator:true,
+                      places:0
+                    }
                   },
                   {
                     fieldName: "Luas tanah (m2)",
@@ -124,7 +120,11 @@
                   },
                   {
                     fieldName: "Luas Bangunan",
-                    label: "Luas Bangunan"
+                    label: "Luas Bangunan",
+                    format:{
+                      digitSeparator:true,
+                      places:0
+                    }
                   },
                   {
                     fieldName: "Jenis",
@@ -160,7 +160,7 @@
                   },
                   {
                     fieldName: "LangitLangit",
-                    label: "LangitLangit"
+                    label: "Langit-Langit"
                   },
                   {
                     fieldName: "Lantai",
@@ -172,31 +172,39 @@
                   },
                   {
                     fieldName: "Panjang Pagar",
-                    label: "Panjang Pagar (m)"
+                    label: "Panjang Pagar"
                   },
                   {
                     fieldName: "Luas Carport",
                     label: "Luas Carport"
                   },
                   {
-                    fieldName: "Pintu/ Jendela",
-                    label: "Pintu/ Jendela"
+                    fieldName: "Pintu/Jendela",
+                    label: "Pintu/Jendela"
                   },
                   {
                     fieldName: "Jumlah Fasilitas",
                     label: "Jumlah Fasilitas"
                   },
                   {
-                    fieldName: "Keadaan Fisik Umumnya (BS/B/S/J/JS)",
-                    label: "Keadaan Fisik Umumnya (BS/B/S/J/JS)"
+                    fieldName: "Keadaan Fisik Umumnya",
+                    label: "Keadaan Fisik Umumnya"
                   },
                   {
                     fieldName: "Biaya Per m2 bangunan",
-                    label: "Biaya Per m2 bangunan"
+                    label: "Biaya Per m2 bangunan",
+                    format:{
+                      digitSeparator:true,
+                      places:0
+                    }
                   },
                   {
                     fieldName: "RCN (Biaya Pembuatan Bangunan Baru)",
-                    label: "RCN (Biaya Pembuatan Bangunan Baru)"
+                    label: "RCN (Biaya Pembuatan Bangunan Baru)",
+                    format:{
+                      digitSeparator:true,
+                      places:0
+                    }
                   },
                   {
                     fieldName: "Tahun Penilaian",
@@ -208,52 +216,88 @@
                   },
                   {
                     fieldName: "Penyusutan",
-                    label: "Penyusutan"
+                    label: "Penyusutan",
+                    format:{
+                      digitSeparator:true,
+                      places:0
+                    }
                   },
                   {
                     fieldName: "Nilai Bangunan",
-                    label: "Nilai Bangunan"
+                    label: "Nilai Bangunan",
+                    format:{
+                      digitSeparator:true,
+                      places:0
+                    }
                   },
                   {
                     fieldName: "Harga Penyesuaian Penawaran (Rp.)",
-                    label: "Harga Penyesuaian Penawaran (Rp.)"
+                    label: "Harga Penyesuaian Penawaran (Rp.)",
+                    format:{
+                      digitSeparator:true,
+                      places:0
+                    }
                   },
                   {
                     fieldName: "Nilai Bangunan (Rp.)",
-                    label: "Nilai Bangunan (Rp.)"
+                    label: "Nilai Bangunan (Rp.)",
+                    format:{
+                      digitSeparator:true,
+                      places:0
+                    }
                   },
                   {
                     fieldName: "Harga Tanah (Rp.)",
-                    label: "Harga Tanah (Rp.)"
+                    label: "Harga Tanah (Rp.)",
+                    format:{
+                      digitSeparator:true,
+                      places:0
+                    }
                   },
                   {
                     fieldName: "Penyesuaian Waktu",
-                    label: "Penyesuaian Waktu"
+                    label: "Penyesuaian Waktu",
+                    format:{
+                      digitSeparator:true,
+                      places:2
+                    }
                   },
                   {
                     fieldName: "Penyesuaian Status Kepemilikan",
-                    label: "Penyesuaian Status Kepemilikan"
+                    label: "Penyesuaian Status Kepemilikan",
+                    format:{
+                      digitSeparator:true,
+                      places:2
+                    }
                   },
                   {
                     fieldName: "nilluas",
-                    label: "nilluas"
+                    label: "Nilai Keseluruhan (Rp.)",
+                    format:{
+                      digitSeparator:true,
+                      places:0
+                    }
                   },
                   {
-                    fieldName: "nilai",
-                    label: "nilai"
+                    fieldName: "join - Copy — Sheet1_nilai",
+                    label: "Nilai Tanah (Rp.)",
+                    format:{
+                      digitSeparator:true,
+                      places:0
+                    }
                   },
                 ]
               },
-              {
-                type:"media",
-                mediaInfos:[{
-                  title:"Foto Lokasi",
-                  type: "image",
-                  value:{
-                    sourceURL:"{Foto}"
-                  }
-                }]
-              },
+              //{
+              //  type:"media",
+              //  mediaInfos:[{
+              //    title:"Foto Lokasi",
+              //    type: "image",
+              //    value:{
+              //      sourceURL:"{Foto}"
+              //    }
+              //  }]
+              //},
             ]}
       };
 

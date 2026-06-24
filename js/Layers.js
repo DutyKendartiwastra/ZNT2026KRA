@@ -64,14 +64,15 @@ function initializeLayers(map) {
 
 
     // Sample 2026
+    const simbolWrapper = window.ambilSimbolSampel("simbol_Sampel");
     const Sampel2026 = new GeoJSONLayer({
         url: "https://kmizofukvrgnmfbfgwsv.supabase.co/storage/v1/object/sign/ZNT2026/TS2026Join.geojson?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZjFlMTc1Zi1iNzdhLTQ3YjEtOTRjYS03NzhiMmQyYTA4NWYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJaTlQyMDI2L1RTMjAyNkpvaW4uZ2VvanNvbiIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODIzMzI1NzgsImV4cCI6MTgxMzg2ODU3OH0.HLCQdRJ-UggQaJhoOtGOc4MAWT9sftIXXKeYPj3v968",
         title: "Sample 2026",
         visible: true,
-        minScale: 10000,
+        minScale: 20000,
         maxScale: 1,
-        //popupTemplate: window.ambilPopupSampel("popup_Sampel"),
-        renderer:window.ambilSimbolSampel("simbol_Sampel"),
+        popupTemplate: window.ambilPopupSampel("popup_Sampel"),
+        renderer:simbolWrapper ? simbolWrapper.symbol : null,
     });
 
     // Persil Lokasi Pembaruan
