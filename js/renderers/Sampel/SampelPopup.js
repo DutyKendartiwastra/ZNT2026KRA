@@ -291,13 +291,23 @@
               {
                 type:"media",
                 mediaInfos:[{
-                  title:"Foto Lokasi",
+                  title:"Foto Lokasi Tampak Dekat",
                   type: "image",
                   value:{
                     sourceURL:"{LinkA}"
-                  }
+                  },
                 }]
               },
+              {
+                type:"media",
+                mediaInfos:[{
+                  title:"Foto Lokasi Tampak Sekitar",
+                  type: "image",
+                  value:{
+                    sourceURL:"{LinkB}"
+                  },
+                }]
+              }
             ]}
       };
 
