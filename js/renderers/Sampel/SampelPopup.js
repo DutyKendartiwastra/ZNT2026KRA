@@ -288,16 +288,16 @@
                   },
                 ]
               },
-              //{
-              //  type:"media",
-              //  mediaInfos:[{
-              //    title:"Foto Lokasi",
-              //    type: "image",
-              //    value:{
-              //      sourceURL:"{Foto}"
-              //    }
-              //  }]
-              //},
+              {
+                type:"media",
+                mediaInfos:[{
+                  title:"Foto Lokasi",
+                  type: "image",
+                  value:{
+                    sourceURL:"{Link A}"
+                  }
+                }]
+              },
             ]}
       };
 
