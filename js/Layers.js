@@ -66,7 +66,7 @@ function initializeLayers(map) {
     // Sample 2026
     const simbolWrapper = window.ambilSimbolSampel("simbol_Sampel");
     const Sampel2026 = new GeoJSONLayer({
-        url: "https://kmizofukvrgnmfbfgwsv.supabase.co/storage/v1/object/sign/ZNT2026/TS2026JoinGetoagOK.geojson?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZjFlMTc1Zi1iNzdhLTQ3YjEtOTRjYS03NzhiMmQyYTA4NWYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJaTlQyMDI2L1RTMjAyNkpvaW5HZXRvYWdPSy5nZW9qc29uIiwic2NvcGUiOiJkb3dubG9hZCIsImlhdCI6MTc4MjM0MzIzMCwiZXhwIjoxNzg0OTM1MjMwfQ.4QsUcYFB6qmwZynj3Pe8oZ_nFo1zN8UbERYfK9-AYKY",
+        url: "https://kmizofukvrgnmfbfgwsv.supabase.co/storage/v1/object/sign/ZNT2026/TS2026JoinGetoagOK-Revisi.geojson?token=eyJraWQiOiJzdG9yYWdlLXVybC1zaWduaW5nLWtleV9hZjFlMTc1Zi1iNzdhLTQ3YjEtOTRjYS03NzhiMmQyYTA4NWYiLCJhbGciOiJIUzI1NiJ9.eyJ1cmwiOiJaTlQyMDI2L1RTMjAyNkpvaW5HZXRvYWdPSy1SZXZpc2kuZ2VvanNvbiIsInNjb3BlIjoiZG93bmxvYWQiLCJpYXQiOjE3ODIzNTE4NDUsImV4cCI6MTc4NDk0Mzg0NX0.Tma7F6gN-KD98zZNPmyDEuMKutxs10ZlG6770Lhcc7M",
         title: "Sample 2026",
         visible: true,
         minScale: 20000,
